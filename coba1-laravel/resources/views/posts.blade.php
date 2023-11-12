@@ -14,5 +14,5 @@
         <a href="/posts/{{ $post->slug }}"class="text-decoration-none">Read more</a>
 </article>
     @endforeach
-    
-@endsection
+
+ @endsection
