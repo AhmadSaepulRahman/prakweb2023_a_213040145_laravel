@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\models\User;
+use App\Models\User;
 use App\Models\Category;
 use App\Models\Post;
 
@@ -15,13 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        
+       
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
 
         // User:: create([
         //     'name' => 'Ahmad Saepul Rahman',
@@ -35,55 +34,59 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'mawarbodas@gmail.com',
         //     'password' => bcrypt ('12345')
         // ]);
+        User::factory(3)->create();
 
-         User::factory(3)->create();
-
-         Category::create([
-             'name' => 'Web Programming',
-            'slug' => 'web-programming'
+        Category::create([
+            'name'=> 'Web Programming',
+            'slug'=> 'web-programming'
         ]);
 
-         Category::create([
-            'name' => 'Personal',
-            'slug' => 'personal'
-         ]);
+        Category::create([
+            'name'=> 'Web Design',
+            'slug'=> 'web-design'
+        ]);
+
+        Category::create([
+            'name'=> 'Personal',
+            'slug'=> 'personal'
+        ]);
 
         Post::factory(20)->create();
 
         // Post::create([
-        //     'title' =>'Judul Pertama',
-        //     'slug' =>'judul-pertama',
-        //     'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque?',
-        //     'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque? Exercitationem quos autem ipsa, explicabo maiores pariatur sequi fugiat, aperiam asperiores nemo molestias illum dicta tempora hic facere eos minima.</p><p> Reprehenderit dolores quaerat tempore praesentium at, porro alias tempora, molestiae eveniet eos placeat dolor recusandae pariatur fugiat, vel quo ex harum voluptatibus ipsum! Molestiae atque, doloremque numquam non cumque quam ab? Fugit odio excepturi reprehenderit quis fuga accusantium cupiditate quas consectetur voluptatibus illum, alias maiores.</p><p> laboriosam inventore eveniet praesentium eum reiciendis ducimus eaque illo nulla dolorem? Odit exercitationem fugiat quis aperiam officiis tenetur quia maiores, harum magnam molestias doloribus ut mollitia totam cupiditate minima at impedit, libero placeat fugit ratione magni sapiente. Nihil itaque ducimus sapiente sit porro blanditiis eveniet doloremque, fugit voluptas nesciunt natus nisi? Pariatur voluptatem, illum dolores blanditiis repellendus soluta autem.</p>',
+        //     'title' => 'Judul Pertama',
+        //     'slug' => 'judul-pertama',
+        //     'excerpt' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur',
+        //     'body' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old.Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 450 ABC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
         //     'category_id' => 1,
-        //     'user_id' => 1
+        //      'user_id' => 1    
         // ]);
 
         // Post::create([
-        //     'title' =>'Judul Kedua',
-        //     'slug' =>'judul-ke-dua',
-        //     'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque?',
-        //     'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque? Exercitationem quos autem ipsa, explicabo maiores pariatur sequi fugiat, aperiam asperiores nemo molestias illum dicta tempora hic facere eos minima.</p><p> Reprehenderit dolores quaerat tempore praesentium at, porro alias tempora, molestiae eveniet eos placeat dolor recusandae pariatur fugiat, vel quo ex harum voluptatibus ipsum! Molestiae atque, doloremque numquam non cumque quam ab? Fugit odio excepturi reprehenderit quis fuga accusantium cupiditate quas consectetur voluptatibus illum, alias maiores.</p><p> laboriosam inventore eveniet praesentium eum reiciendis ducimus eaque illo nulla dolorem? Odit exercitationem fugiat quis aperiam officiis tenetur quia maiores, harum magnam molestias doloribus ut mollitia totam cupiditate minima at impedit, libero placeat fugit ratione magni sapiente. Nihil itaque ducimus sapiente sit porro blanditiis eveniet doloremque, fugit voluptas nesciunt natus nisi? Pariatur voluptatem, illum dolores blanditiis repellendus soluta autem.</p>',
+        //     'title' => 'Judul Kedua',
+        //     'slug' => 'judul-kedua',
+        //     'excerpt' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur',
+        //     'body' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old.Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 450 ABC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
         //     'category_id' => 1,
-        //     'user_id' => 1
+        //      'user_id' => 1    
         // ]);
 
         // Post::create([
-        //     'title' =>'Judul ketiga',
-        //     'slug' =>'judul-ke-tiga',
-        //     'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque?',
-        //     'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque? Exercitationem quos autem ipsa, explicabo maiores pariatur sequi fugiat, aperiam asperiores nemo molestias illum dicta tempora hic facere eos minima.</p><p> Reprehenderit dolores quaerat tempore praesentium at, porro alias tempora, molestiae eveniet eos placeat dolor recusandae pariatur fugiat, vel quo ex harum voluptatibus ipsum! Molestiae atque, doloremque numquam non cumque quam ab? Fugit odio excepturi reprehenderit quis fuga accusantium cupiditate quas consectetur voluptatibus illum, alias maiores.</p><p> laboriosam inventore eveniet praesentium eum reiciendis ducimus eaque illo nulla dolorem? Odit exercitationem fugiat quis aperiam officiis tenetur quia maiores, harum magnam molestias doloribus ut mollitia totam cupiditate minima at impedit, libero placeat fugit ratione magni sapiente. Nihil itaque ducimus sapiente sit porro blanditiis eveniet doloremque, fugit voluptas nesciunt natus nisi? Pariatur voluptatem, illum dolores blanditiis repellendus soluta autem.</p>',
+        //     'title' => 'Judul Ketiga',
+        //     'slug' => 'judul-ketiga',
+        //     'excerpt' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur',
+        //     'body' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old.Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 450 ABC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
         //     'category_id' => 2,
-        //     'user_id' => 2
+        //      'user_id' => 1    
         // ]);
 
         // Post::create([
-        //     'title' =>'Judul keempat',
-        //     'slug' =>'judul-ke-empat',
-        //     'excerpt' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque?',
-        //     'body' => '<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, aliquid voluptatibus quos minus commodi sint unde alias illo pariatur, ratione accusantium, neque impedit voluptate repellendus doloremque? Exercitationem quos autem ipsa, explicabo maiores pariatur sequi fugiat, aperiam asperiores nemo molestias illum dicta tempora hic facere eos minima.</p><p> Reprehenderit dolores quaerat tempore praesentium at, porro alias tempora, molestiae eveniet eos placeat dolor recusandae pariatur fugiat, vel quo ex harum voluptatibus ipsum! Molestiae atque, doloremque numquam non cumque quam ab? Fugit odio excepturi reprehenderit quis fuga accusantium cupiditate quas consectetur voluptatibus illum, alias maiores.</p><p> laboriosam inventore eveniet praesentium eum reiciendis ducimus eaque illo nulla dolorem? Odit exercitationem fugiat quis aperiam officiis tenetur quia maiores, harum magnam molestias doloribus ut mollitia totam cupiditate minima at impedit, libero placeat fugit ratione magni sapiente. Nihil itaque ducimus sapiente sit porro blanditiis eveniet doloremque, fugit voluptas nesciunt natus nisi? Pariatur voluptatem, illum dolores blanditiis repellendus soluta autem.</p>',
+        //     'title' => 'Judul Keempat',
+        //     'slug' => 'judul-keempat',
+        //     'excerpt' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur',
+        //     'body' => 'Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 450 ABC, making it over 2009 years old.Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 450 ABC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
         //     'category_id' => 2,
-        //     'user_id' => 2
+        //      'user_id' => 2    
         // ]);
 
     }
