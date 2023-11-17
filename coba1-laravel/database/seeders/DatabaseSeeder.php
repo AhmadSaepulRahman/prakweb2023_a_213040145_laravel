@@ -13,27 +13,8 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-    public function run(): void
+    public function run()
     {
-       
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        // User:: create([
-        //     'name' => 'Ahmad Saepul Rahman',
-        //     'email' => 'ahmadsaepul208@gmail.com',
-        //     'password' => bcrypt ('12345')
-        // ]);
-
-        
-        // User:: create([
-        //     'name' => 'Mawar Bodas',
-        //     'email' => 'mawarbodas@gmail.com',
-        //     'password' => bcrypt ('12345')
-        // ]);
         User::factory(3)->create();
 
         Category::create([
@@ -53,6 +34,26 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(20)->create();
 
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+        // User:: create([
+        //     'name' => 'Ahmad Saepul Rahman',
+        //     'email' => 'ahmadsaepul208@gmail.com',
+        //     'password' => bcrypt ('12345')
+        // ]);
+
+        
+        // User:: create([
+        //     'name' => 'Mawar Bodas',
+        //     'email' => 'mawarbodas@gmail.com',
+        //     'password' => bcrypt ('12345')
+        // ]);
+
+    
         // Post::create([
         //     'title' => 'Judul Pertama',
         //     'slug' => 'judul-pertama',
