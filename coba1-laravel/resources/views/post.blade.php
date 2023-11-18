@@ -16,7 +16,7 @@
 
         </article>
 
-        <a href="/blog" class="d-block mt-3">BACK</a>
+        <a href="/blog" class="d-block mt-3">BACK TO POSTS</a>
       </div>
     </div>
   </div>
