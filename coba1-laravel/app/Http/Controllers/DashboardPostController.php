@@ -39,8 +39,13 @@ class DashboardPostController extends Controller
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
             'category_id' => 'required',
+            'image' =>'image|file|max:1024',
             'body' => 'required'
         ]);
+
+        if($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('post-images');
+        }
 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200); 
@@ -95,7 +100,7 @@ class DashboardPostController extends Controller
                 ->update($validatedData);
 
         return redirect('/dashboard/posts')->with('success', 'Post has been updated!');
-    }
+    }   
 
     /**
      * Remove the specified resource from storage.
